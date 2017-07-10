@@ -2,9 +2,11 @@
 
 <ul>
 <% @order.order_items.each do |item| %>
-  <%= item.book.title %>
-  $<%= item.book.price %>
-  Qty:<%= item.quantity %>
-  Price: $<%= (item.book.price)*(item.quantity)%>
+  <li>
+    <%= item.book.title %>
+    $<%= item.book.price %>
+    Qty:<%= item.quantity %>
+    Price: $<%= (item.book.price)*(item.quantity)%>
+  </li>
 <% end %>
 <ul>

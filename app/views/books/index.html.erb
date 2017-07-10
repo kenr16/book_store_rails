@@ -1,0 +1,17 @@
+<h3>books</h3>
+<% @books.each do |book| %>
+  <div class="book media">
+    <div class="media-left media-top">
+      <%= link_to book_path(book) do %>
+        <%= image_tag book.img_src, class: "media-object", size: "90x135" %>
+      <% end %>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= link_to book.title, book_path(book)%>
+      </h4>
+      <p>by need author</p>
+      <p><%= book.description %></p>
+    </div>
+  </div>
+<% end %>

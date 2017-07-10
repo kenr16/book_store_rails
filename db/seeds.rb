@@ -19,6 +19,7 @@ user.account.orders.create!
     description: Faker::Lorem.sentence(3, true, 2),
     length: Faker::Number.between(100, 760),
     stock: Faker::Number.between(10, 30),
-    price: Faker::Commerce.price
+    price: Faker::Commerce.price,
+    img_src: "cover.jpg"
   )
 end

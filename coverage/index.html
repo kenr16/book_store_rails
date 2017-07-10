@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-10T10:26:38-07:00">2017-07-10T10:26:38-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-10T10:27:44-07:00">2017-07-10T10:27:44-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -31,9 +31,9 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>26</b> files in total.
-    <b>98</b> relevant lines. 
-    <span class="green"><b>98</b> lines covered</span> and
+    <b>29</b> files in total.
+    <b>108</b> relevant lines. 
+    <span class="green"><b>108</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -81,9 +81,29 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#0f90645f4b3af163ea76a0df93d5c0c9360d917d" class="src_link" title="app/models/book.rb">app/models/book.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>4</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#a81e2aa2c0549cfc7482bf2021c0b2542cea98db" class="src_link" title="app/models/order.rb">app/models/order.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>6</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#08395f8f952597525f62098255b820cf95d5633c" class="src_link" title="app/models/order_item.rb">app/models/order_item.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
         <td>4</td>
         <td>4</td>
         <td>0</td>
@@ -252,6 +272,16 @@
       
       <tr>
         <td class="strong"><a href="#100fc44a2804a1fbf4fe33147def42499e3b053b" class="src_link" title="spec/models/account_spec.rb">spec/models/account_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#e3ded4f9aee19dce7f37ac2244cd4afdf5cb73e8" class="src_link" title="spec/models/order_item_spec.rb">spec/models/order_item_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>5</td>
         <td>3</td>
@@ -437,6 +467,49 @@
 </div>
 
       
+        <div class="source_table" id="0f90645f4b3af163ea76a0df93d5c0c9360d917d">
+  <div class="header">
+    <h3>app/models/book.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Book &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :order_items</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :price, :title, :description, :length, :stock, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="a81e2aa2c0549cfc7482bf2021c0b2542cea98db">
   <div class="header">
     <h3>app/models/order.rb</h3>
@@ -482,6 +555,55 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="08395f8f952597525f62098255b820cf95d5633c">
+  <div class="header">
+    <h3>app/models/order_item.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class OrderItem &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :order</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :book</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :quantity, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
@@ -3502,6 +3624,55 @@
           <span class="hits">2</span>
           
           <code class="ruby">  it { should validate_presence_of :name }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="e3ded4f9aee19dce7f37ac2244cd4afdf5cb73e8">
+  <div class="header">
+    <h3>spec/models/order_item_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe OrderItem do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it { should validate_presence_of :quantity }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">

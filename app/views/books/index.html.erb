@@ -12,6 +12,7 @@
       </h4>
       <p>by need author</p>
       <p><%= book.description %></p>
+      <%= render partial: "layouts/add_to_cart", locals: { book: book }%>
     </div>
   </div>
 <% end %>

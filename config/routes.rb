@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+  resources :orders do
+    resources :order_items
+  end
+
   resources :books
 
   root to: "books#index"

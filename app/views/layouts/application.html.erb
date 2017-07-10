@@ -27,6 +27,9 @@
             </li>
           <% elsif  current_user %>
             <li>
+              <%= link_to "Cart (#{cart_items})", account_order_path(current_user.account, current_user.account.orders.last)  %>
+            </li>
+            <li>
               <%= link_to "profile", edit_user_registration_path %>
             </li>
             <li>
@@ -42,6 +45,8 @@
           <% end %>
         </ul>
       </div>
+
+
 
       <%= flash[:alert] %>
       <%= flash[:notice] %>

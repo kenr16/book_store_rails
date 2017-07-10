@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   helper_method :cart_cost
 
   def cart_items
-    current_user.account.orders.last.order_items.count
+    current_user.account.orders.last.order_items.sum { |item| item.quantity }
   end
 
   def cart_cost

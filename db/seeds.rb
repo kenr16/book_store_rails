@@ -16,10 +16,11 @@ user.account.orders.create!
 50.times do |index|
   Book.create!(
     title: Faker::Book.title,
-    description: Faker::Lorem.sentence(3, true, 2),
+    description: Faker::Lorem.paragraph(3, true, 2),
     length: Faker::Number.between(100, 760),
     stock: Faker::Number.between(10, 30),
     price: Faker::Commerce.price,
+    author: Faker::Book.author,
     img_src: "cover.jpg"
   )
 end

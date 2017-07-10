@@ -10,10 +10,13 @@
       <h4 class="media-heading">
         <%= link_to book.title, book_path(book)%>
       </h4>
-      <p>By need author</p>
+      <p>By <%= book.author %></p>
       <p><%= book.description %></p>
       <p>In Stock: <%= book.stock %></p>
+
+      <% if current_user %>
       <%= render partial: "layouts/add_to_cart", locals: { book: book }%>
+      <% end %>
 
     </div>
   </div>

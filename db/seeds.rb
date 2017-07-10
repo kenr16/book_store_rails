@@ -4,7 +4,7 @@ Account.destroy_all
 Order.destroy_all
 OrderItem.destroy_all
 
-user = User.create!(email: "admin@gmail.com", password: "password", password_confirmation: "password")
+user = User.create!(name: "Admin", email: "admin@gmail.com", password: "password", password_confirmation: "password")
 user.update_attribute :admin, true
 
 user.account = Account.create(name: "Administrator")

@@ -578,6 +578,22 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/bookstore/spec/models/order_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/Desktop/bookstore/app/models/order.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/bookstore/spec/models/user_spec.rb": [
         1,
         null,
@@ -586,6 +602,6 @@
         null
       ]
     },
-    "timestamp": 1499707465
+    "timestamp": 1499707598
   }
 }

@@ -10,7 +10,6 @@
     </label>
   </article>
 
-  <%= form_tag charges_path, method: :post do%>
     <%= hidden_field_tag :amount, "#{@amount}"%>
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -18,6 +17,4 @@
             data-amount="<%= @amount.to_i %>"
             data-locale="auto">
     </script>
-  <% end %>
-
 <% end %>

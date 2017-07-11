@@ -21,6 +21,12 @@ class ChargesController < ApplicationController
       # :customer => customer.id,
     )
 
+    current_user.account.orders.last.update(:status => 'Resolved')
+    current_user.account.orders.create
+    flash[:alert] = "Order successfully proccessed!"
+
+    redirect_to books_path
+
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path

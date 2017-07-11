@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :order_items
   end
 
+  resources :charges
+
   resources :books
 
   root to: "books#index"

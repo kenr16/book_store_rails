@@ -1,4 +1,4 @@
-<h1>Success!</h1>
+<h1>Your Shopping Cart</h1>
 
 <ul>
 <% @order.order_items.each do |item| %>
@@ -10,3 +10,8 @@
   </li>
 <% end %>
 <ul>
+
+<hr>
+
+<p>Pay this amount: $<%= cart_cost%></p>
+<%= link_to 'Pay Now', {:controller => "charges", :action => "new", :amount => cart_cost.*(100) } %>

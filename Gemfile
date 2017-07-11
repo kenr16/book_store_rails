@@ -18,9 +18,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'faker'
 gem 'rails_admin', '~> 1.2'
+gem 'stripe'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'launchy'
   gem 'shoulda-matchers'

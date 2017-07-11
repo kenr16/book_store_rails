@@ -6,14 +6,18 @@
       </div>
     <% end %>
     <label class="amount">
-      <span>Amount: $<%= @amount %></span>
+      <span>Amount: $<%= @amount/100 %></span>
     </label>
   </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="<%= @amount %>"
-          data-locale="auto">
-  </script>
+  <%= form_tag charges_path, method: :post do%>
+    <%= hidden_field_tag :amount, "#{@amount}"%>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Your order of books"
+            data-amount="<%= @amount.to_i %>"
+            data-locale="auto">
+    </script>
+  <% end %>
+
 <% end %>

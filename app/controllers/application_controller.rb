@@ -3,6 +3,11 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   helper_method :cart_items
   helper_method :cart_cost
+  helper_method :order_history
+
+  def order_history
+    current_user.account.orders.select{ |order| order.status != "In progress"}
+  end
 
   def cart_items
     current_user.account.orders.last.order_items.sum { |item| item.quantity }

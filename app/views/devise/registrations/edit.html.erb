@@ -48,7 +48,7 @@
 
 <h2> Previous Orders </h2>
 
-<% current_user.account.orders.each do |order| %>
+<% order_history.each do |order| %>
   <hr>
   Order date: <%= order.updated_at.to_time.strftime('%l:%M %p on %B %e') %> <br>
   <% order.order_items.each do |item| %>

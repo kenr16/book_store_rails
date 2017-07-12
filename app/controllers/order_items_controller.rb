@@ -37,8 +37,8 @@ class OrderItemsController < ApplicationController
     # end
     #
     #
-
     redirect_to account_order_path(current_user.account, current_user.account.orders.last)
+
   end
 
 
